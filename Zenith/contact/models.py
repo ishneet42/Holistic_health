@@ -1,11 +1,12 @@
 from django.db import models
 
 
-class ContactMessage(models.Model):
+class Contact(models.Model):
     name = models.CharField(max_length=100)
     email = models.EmailField()
-    organization = models.CharField(max_length=100)
-    mobile_number = models.CharField(max_length=15)
-    message = models.TextField()
+    org = models.CharField(max_length=100)
+    number = models.CharField(max_length=15)
 
-# Create your models here.
+    def __str__(self):
+        return self.name
+

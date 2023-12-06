@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
 
 :root{
-    --primary:#0077b6;
+    --primary:#0c5c73;
     --secondary:#48cae4;
     --black:#333;
     --white:#fff;
@@ -139,6 +139,7 @@ section{
     padding: 0;
 }
 
+
 .home .slide{
     min-height: 100vh;
     background-size: cover !important;
@@ -148,8 +149,19 @@ section{
     justify-content: center;
     z-index: -1;
 }
+.home .slide::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+}
 
 .home .slide .content{
+    position: relative;
+    z-index: 1
     width: 80rem;
     text-align: center;
 }
@@ -159,6 +171,13 @@ section{
     text-transform: uppercase;
     color: var(--white);
     line-height: 1.1;
+    padding: 2rem 0;
+}
+.home .slide .thanks h3{
+    font-size: 4rem;
+    text-transform: uppercase;
+    color: var(--black);
+    line-height: 4.1;
     padding: 2rem 0;
 }
 

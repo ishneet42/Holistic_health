@@ -49,29 +49,29 @@
 
             <div class="swiper-slide slide" style="background: url({% static 'img/home-slide1.jpg' %}) no-repeat;">
                <div class="content">
-                  <h3>*TAGLINE*</h3>
-                  <a href="#" class="btn"> *BUTTON*</a>
+                  <h3>Elevate Your Team's Potential with Zenith Care</h3>
+                  <a href="#" class="btn"> KNOW MORE </a>
                </div>
             </div>
 
             <div class="swiper-slide slide" style="background: url({% static 'img/home-slide2.jpg' %}) no-repeat;">
                <div class="content">
-                  <h3>*TAGLINE*</h3>
-                  <a href="#" class="btn"> *BUTTON*</a>
+                  <h3>Elevate Your Team's Potential with Zenith Care</h3>
+                  <a href="#" class="btn"> KNOW MORE </a>
                </div>
             </div>
 
             <div class="swiper-slide slide" style="background: url({% static 'img/home-slide3.jpg' %}) no-repeat;">
                <div class="content">
-                  <h3>*TAGLINE*</h3>
-                  <a href="#" class="btn"> *BUTTON*</a>
+                  <h3>Elevate Your Team's Potential with Zenith Care</h3>
+                  <a href="#" class="btn"> KNOW MORE </a>
                </div>
             </div>
 
             <div class="swiper-slide slide" style="background: url({% static 'img/home-slide4.jpg' %}) no-repeat;">
                <div class="content">
-                  <h3>*TAGLINE*</h3>
-                  <a href="#" class="btn"> *BUTTON*</a>
+                  <h3>Elevate Your Team's Potential with Zenith Care</h3>
+                  <a href="#" class="btn"> KNOW MORE </a>
                </div>
             </div>
 
@@ -94,9 +94,14 @@
 
          <div class="content">
             <h3>About us</h3>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ratione nesciunt blanditiis maxime natus repudiandae veritatis alias laboriosam neque cum! Est adipisci assumenda, ad debitis iusto laudantium repellat aliquam dolore voluptates.</p>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ratione nesciunt blanditiis maxime natus repudiandae veritatis alias laboriosam neque cum! Est adipisci assumenda, ad debitis iusto laudantium repellat aliquam dolore voluptates.</p>
-         </div>
+            <p>
+Welcome to Zenith Care, where we redefine workplace wellness.
+               At the heart of our mission is the commitment to empower companies and their employees through comprehensive holistic healthcare solutions.
+               We tailor wellness programs, including accupressure and sujok therapy, dental care, nutrition consultations, gynecology, and general medicine, recognizing that each employee's health journey is unique.</p>
+            <p>With experienced healthcare professionals and a client-centric focus, we seamlessly integrate our services into corporate environments, fostering a positive work culture.
+               Choose Zenith Care for proven results, innovation in healthcare, and a commitment to excellence.
+               Let's embark on a journey towards a healthier, happier, and more productive workforce together.</p>
+            </div>
 
       </div>
 
@@ -542,29 +547,28 @@
    <section class="reservation" id="reservation">
 
       <h1 class="heading">Contact Us: </h1>
-
-      <form action="">
-
+      <form method="post" action="{% url 'thank_you_page' %}">
+               {% csrf_token %}
          <div class="container">
 
             <div class="box">
                <p>name <span>*</span></p>
-               <input type="text" class="input" placeholder="Your Name">
+               <input type="text" class="input" placeholder="Your Name" id="name" name="name">
             </div>
 
             <div class="box">
                <p>email <span>*</span></p>
-               <input type="text" class="input" placeholder="Your Email">
+               <input type="text" class="input" placeholder="Your Email" id="email" name="email">
             </div>
 
             <div class="box">
                <p>Organization <span>*</span></p>
-               <input type="text" class="input" placeholder="Name of Organization">
+               <input type="text" class="input" placeholder="Name of Organization" id="org" name="org">
             </div>
 
             <div class="box">
                <p>Contact Number <span>*</span></p>
-               <input type="text" class="input" placeholder="Mobile Number">
+               <input type="text" class="input" placeholder="Mobile Number" id="number" name="number">
             </div>
 
          </div>
@@ -584,19 +588,21 @@
 
          <div class="box">
             <h3>contact info</h3>
-            <a href="#"> <i class="fas fa-phone"></i> +123-852-4565 </a>
-            <a href="#"> <i class="fas fa-phone"></i> +123-852-4565</a>
+            <a href="#"> <i class="fas fa-phone"></i> +91 98XXXXXXXX </a>
+            <a href="#"> <i class="fas fa-phone"></i> +91 98XXXXXXXX </a>
             <a href="#"> <i class="fas fa-envelope"></i> zenithcare.info@gmail.com</a>
             <a href="#"> <i class="fas fa-map"></i> New Delhi, India </a>
          </div>
 
          <div class="box">
             <h3>quick links</h3>
-            <a href="#"> <i class="fas fa-arrow-right"></i> home</a>
-            <a href="#"> <i class="fas fa-arrow-right"></i> about</a>
-            <a href="#"> <i class="fas fa-arrow-right"></i> rooms</a>
-            <a href="#"> <i class="fas fa-arrow-right"></i> gallery</a>
-            <a href="#"> <i class="fas fa-arrow-right"></i> reservation</a>
+         <a href="#home">home</a>
+         <a href="#about">about</a>
+         <a href="#room">Our Services</a>
+         <a href="#gallery">gallery</a>
+         <a href="#review">review</a>
+         <a href="#faq">faq</a>
+         <a href="#reservation" class="btn"> Book a Demo </a>
          </div>
 
          <div class="box">
